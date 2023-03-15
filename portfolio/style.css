@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+#grid {
+    width: 1320px;
+    margin: 0 auto;
+}
+#grid-filters {
+    width: 1320px;
+    margin: 40px auto;
+}
+#grid-filters > a {
+    display: inline-block;
+    padding: 10px;
+    background: #d1b518;
+    border: 3px solid #576612;
+}
+#grid-filters > .filterX {
+    background: #32B1DF;
+    border: 3px solid #0A506A;
+}
+#grid-filters > .filterY {
+    background: #dfdc32;
+    border: 3px solid #89a11e;
+}
+#grid-filters > .filterZ {
+    background: #df3e32;
+    border: 3px solid #641515;
+}
+#grid-filters > a:link,
+#grid-filters > a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+#grid-filters > a:hover {
+    color: #FFF;
+    background: #424242;
+    border: 3px solid #555;
+}
+#grid-filters > a:active {
+    background: #2c2c2c;
+    border: 3px solid #555;
+}
+.grid-item {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 10px;
+    margin: 0 0 40px;
+    background: #CCC;
+    border: 4px solid #777;
+}
+.x {
+    background: #32B1DF;
+    border: 3px solid #0A506A;
+}
+.y {
+    background: #dfdc32;
+    border: 3px solid #89a11e;
+}
+.z {
+    background: #df3e32;
+    border: 3px solid #641515;
+}
+@media screen and (min-width:1024px) and (max-width:1400px){
+    #grid, #grid-filters {
+        width: 980px;
+    }
+}
+@media screen and (min-width:640px) and (max-width:1000px){
+    #grid, #grid-filters {
+        width: 640px;
+    }
+}
+@media screen and (min-width:0px) and (max-width:639px){
+    #grid, #grid-filters {
+        width: 300px;
+    }
+}

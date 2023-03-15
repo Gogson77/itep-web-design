@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Portfolio site</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <script>
+        function filtriraj () {
+            $('#grid').masonry({
+                // options
+                itemSelector: '.grid-item',
+                columnWidth: 300,
+                gutter: 40
+            });
+        };
+        $(document).ready( function() {
+            // u startu
+            filtriraj ();
+
+            //dugmad
+            $('#grid-filters > a').on( 'click', function(){
+                izbor = $(this).attr('data-filter')
+               // alert("kliknuto je na " + izbor + " !");
+               //$("."+izbor).toggle(1000, filtriraj);
+
+               if($("."+izbor).is(":visible")) {
+                $("."+izbor).fadeOut(1000, filtriraj);
+               } else {
+                $("."+izbor).show(10, filtriraj); 
+               }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="grid-filters">
+        <a href="#" class="filterX" data-filter="x">Radovi X</a>
+        <a href="#" class="filterY" data-filter="y">Radovi Y</a>
+        <a href="#" class="filterZ" data-filter="z">Radovi Z</a>
+    </div>
+    <div id="grid">
+        <div class="grid-item x">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item x -->
+        <div class="grid-item x">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nobis autem doloremque ullam
+                officia. Delectus cupiditate, qui pariatur odit asperiores voluptate suscipit quam laboriosam quod
+                recusandae, praesentium possimus. Sed inventore ipsam soluta expedita alias vel harum esse, in quas, aut
+                laudantium provident aperiam magnam dolorem adipisci hic unde officia minus quidem, fuga eveniet atque
+                temporibus. Dolor similique quos provident nulla, aliquid corporis architecto sequi iure nostrum vitae,
+                excepturi cupiditate nisi deserunt sint obcaecati quia fugiat libero asperiores! Aut, expedita!
+                Asperiores veritatis magni, doloribus dicta illum ea alias delectus. Saepe voluptatibus provident, hic
+                tempora qui facere quis magnam! Hic, temporibus officiis.Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item x -->
+        <div class="grid-item y">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima cupiditate dolorem vitae ducimus
+                laboriosam eos ut eveniet quo velit expedita, inventore illum doloremque porro alias, dolore dolor
+                corporis! Doloremque et consequatur, maxime distinctio corporis nostrum dolorum, quos voluptate rem
+                dolorem beatae reiciendis. Ex ab voluptates sequi minima voluptatum, voluptatibus cum?Lorem, ipsum dolor
+                sit amet consectetur adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item y -->
+        <div class="grid-item z">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse tempore minima animi, officiis vero
+                voluptas nihil at nobis quis, distinctio rerum voluptatum excepturi autem magnam ducimus quisquam.
+                Ratione, debitis optio?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nisi velit
+                quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item z -->
+        <div class="grid-item x">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item x -->
+        <div class="grid-item y">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur debitis totam voluptatem quam
+                doloribus at earum iusto cum vero eveniet.Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item y -->
+        <div class="grid-item x">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item x -->
+        <div class="grid-item y">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nobis autem doloremque ullam
+                officia. Delectus cupiditate, qui pariatur odit asperiores voluptate suscipit quam laboriosam quod
+                recusandae, praesentium possimus. Sed inventore ipsam soluta expedita alias vel harum esse, in quas, aut
+                laudantium provident aperiam magnam dolorem adipisci hic unde officia minus quidem, fuga eveniet atque
+                temporibus. Dolor similique quos provident nulla, aliquid corporis architecto sequi iure nostrum vitae,
+                excepturi cupiditate nisi deserunt sint obcaecati quia fugiat libero asperiores! Aut, expedita!
+                Asperiores veritatis magni, doloribus dicta illum ea alias delectus. Saepe voluptatibus provident, hic
+                tempora qui facere quis magnam! Hic, temporibus officiis.Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item y -->
+        <div class="grid-item z">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima cupiditate dolorem vitae ducimus
+                laboriosam eos ut eveniet quo velit expedita, inventore illum doloremque porro alias, dolore dolor
+                corporis! Doloremque et consequatur, maxime distinctio corporis nostrum dolorum, quos voluptate rem
+                dolorem beatae reiciendis. Ex ab voluptates sequi minima voluptatum, voluptatibus cum?Lorem, ipsum dolor
+                sit amet consectetur adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item z -->
+        <div class="grid-item x">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse tempore minima animi, officiis vero
+                voluptas nihil at nobis quis, distinctio rerum voluptatum excepturi autem magnam ducimus quisquam.
+                Ratione, debitis optio?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nisi velit
+                quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item x -->
+        <div class="grid-item z">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item z -->
+        <div class="grid-item y">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur debitis totam voluptatem quam
+                doloribus at earum iusto cum vero eveniet.Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item y -->
+        <div class="grid-item x">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item x -->
+        <div class="grid-item z">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nobis autem doloremque ullam
+                officia. Delectus cupiditate, qui pariatur odit asperiores voluptate suscipit quam laboriosam quod
+                recusandae, praesentium possimus. Sed inventore ipsam soluta expedita alias vel harum esse, in quas, aut
+                laudantium provident aperiam magnam dolorem adipisci hic unde officia minus quidem, fuga eveniet atque
+                temporibus. Dolor similique quos provident nulla, aliquid corporis architecto sequi iure nostrum vitae,
+                excepturi cupiditate nisi deserunt sint obcaecati quia fugiat libero asperiores! Aut, expedita!
+                Asperiores veritatis magni, doloribus dicta illum ea alias delectus. Saepe voluptatibus provident, hic
+                tempora qui facere quis magnam! Hic, temporibus officiis.Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item z -->
+        <div class="grid-item x">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima cupiditate dolorem vitae ducimus
+                laboriosam eos ut eveniet quo velit expedita, inventore illum doloremque porro alias, dolore dolor
+                corporis! Doloremque et consequatur, maxime distinctio corporis nostrum dolorum, quos voluptate rem
+                dolorem beatae reiciendis. Ex ab voluptates sequi minima voluptatum, voluptatibus cum?Lorem, ipsum dolor
+                sit amet consectetur adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item x -->
+        <div class="grid-item y">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse tempore minima animi, officiis vero
+                voluptas nihil at nobis quis, distinctio rerum voluptatum excepturi autem magnam ducimus quisquam.
+                Ratione, debitis optio?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nisi velit
+                quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item y -->
+        <div class="grid-item z">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item z -->
+        <div class="grid-item y">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur debitis totam voluptatem quam
+                doloribus at earum iusto cum vero eveniet.Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item y -->
+        <div class="grid-item x">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item x -->
+        <div class="grid-item y">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nobis autem doloremque ullam
+                officia. Delectus cupiditate, qui pariatur odit asperiores voluptate suscipit quam laboriosam quod
+                recusandae, praesentium possimus. Sed inventore ipsam soluta expedita alias vel harum esse, in quas, aut
+                laudantium provident aperiam magnam dolorem adipisci hic unde officia minus quidem, fuga eveniet atque
+                temporibus. Dolor similique quos provident nulla, aliquid corporis architecto sequi iure nostrum vitae,
+                excepturi cupiditate nisi deserunt sint obcaecati quia fugiat libero asperiores! Aut, expedita!
+                Asperiores veritatis magni, doloribus dicta illum ea alias delectus. Saepe voluptatibus provident, hic
+                tempora qui facere quis magnam! Hic, temporibus officiis.Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item y -->
+        <div class="grid-item z">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima cupiditate dolorem vitae ducimus
+                laboriosam eos ut eveniet quo velit expedita, inventore illum doloremque porro alias, dolore dolor
+                corporis! Doloremque et consequatur, maxime distinctio corporis nostrum dolorum, quos voluptate rem
+                dolorem beatae reiciendis. Ex ab voluptates sequi minima voluptatum, voluptatibus cum?Lorem, ipsum dolor
+                sit amet consectetur adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item z -->
+        <div class="grid-item x">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse tempore minima animi, officiis vero
+                voluptas nihil at nobis quis, distinctio rerum voluptatum excepturi autem magnam ducimus quisquam.
+                Ratione, debitis optio?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nisi velit
+                quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item x -->
+        <div class="grid-item z">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item z -->
+        <div class="grid-item y">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur debitis totam voluptatem quam
+                doloribus at earum iusto cum vero eveniet.Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Provident, nisi velit quisquam veniam quia
+                repellat quidem numquam vero, temporibus deserunt delectus, eaque exercitationem alias labore voluptate
+                adipisci eligendi quis aliquam placeat. Molestiae doloribus sunt consectetur maiores aperiam illo id
+                illum debitis impedit, aut expedita autem incidunt, earum numquam laboriosam fuga quis. Optio iste
+                porro, non recusandae deserunt odit cumque laboriosam expedita in harum libero sequi soluta illum
+                aliquid aspernatur mollitia accusantium, ut praesentium aut perferendis sint distinctio dolorem dolore.
+                Hic ullam sit similique ea explicabo omnis beatae id natus expedita nam quidem autem, accusantium
+                molestias, repellat ratione dolore cumque odit.</p>
+        </div><!-- end of .grid-item y -->
+    </div><!-- end of #grid-->
+</body>
+
+</html>
